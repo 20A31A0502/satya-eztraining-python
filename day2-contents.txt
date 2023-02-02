@@ -1,0 +1,192 @@
+#BITWISE OPERATORS:
+o's and 1's
+some operation if u do like dz it will be faster
+like-compressing data
+sending data in network to network
+0-1 or ON-OFF OR True-False
+1.BITWISE-AND(&):10&4
+2.BITWISE-OR(|):10|4
+3.BITWISE-NEGATION(~):1's complementary->~3
+4.BITWISE-XOR(^):9^8
+5.LEFT SHIFT(<<):10<<2
+6.RIGHT SHIFT(>>):10>>2
+
+#PROGRAM:
+get any 2 no's both the no's should be less than or equal to 15,perform bitwise &,|,^
+
+
+#MULTIPLE LINES IN SINGLE LINE USING LIST(MAP):
+n=int(input("size:"))
+a=list(map(int,input("numbers").strip().split()))[:n]
+print(a)
+output:
+size:5
+numbers:1 2 3 4 5 6 7 
+[1, 2, 3, 4, 5]
+
+
+2.n=int(input("size:"))
+a=list(map(int,input("numbers:").strip().split()))
+print(a)
+output:
+size:5
+numbers:1 2 3 4 5 6 7
+[1, 2, 3, 4, 5, 6, 7]
+
+#program:
+find product of 10 integer numbers
+
+#END & SEPARATE:
+print('its', 'a', 'gud', 'day')
+print('all','is','gud')
+print('joy')
+output:
+its a gud day
+all is gud
+joy
+
+2.end with space:
+print('its', 'a', 'gud', 'day',end=' ')
+print('all','is','gud',end=' ')
+print('joy')
+output:
+its a gud day all is gud joy
+ 
+3.end without space:
+print('its', 'a', 'gud', 'day',end='')
+print('all','is','gud',end='')
+print('joy')
+output:
+its a gud dayall is gudjoy
+
+4.print('its', 'a', 'gud', 'day',end='@')
+print('all','is','gud',end='@')
+print('joy')
+output:
+its a gud day@all is gud@joy
+
+5.print('its', 'a', 'gud', 'day',sep="###",end=' ')
+print('all','is','gud',end=' ')
+print('joy')
+output:
+its###a###gud###day all is gud joy
+
+6.print('its', 'a', 'gud', 'day',sep="###")
+print('all','is','gud')
+print('joy')
+output:
+its###a###gud###day
+all is gud
+joy
+
+#PRINTING DIFF SHAPES:
+#PROGRAMS:
+print hollow triangle(upside down)
+print hollow heart
+print frog
+
+#CONDITIONAL STATEMENTS:
+1.SIMPLE-IF
+t=27
+if t>26:
+    print("yes")
+output:
+yes
+
+2.IF-ELSE
+t=2
+if t>26:
+    print("yes")
+else:
+    print("no")
+output:
+no
+
+3.ELSE-IF 
+t=26
+if t>26:
+    print("yes")
+elif t==26:
+    print("its equal")
+output:
+its equal
+4.ELSE-IF LADDER
+t=25
+if t>26:
+    print("yes")
+elif t==26:
+    print("its equal")
+elif t<26:
+    print("its less")
+output:
+its less
+
+
+5.NESTED-IF
+num=15
+if num>=0:
+    if num==0:
+        print("zero")
+    else:
+        print("positive number")
+else:
+    print("negative number")
+output:
+positive number
+
+#PROGRAM:
+#temperature above 45 hottest
+#temperature 40-45 hot
+#temperature 25-40 moderate
+#temperature 10-25 cold
+#temperature beloe 10 chill
+
+#programs:
+1.get a number as input and find out whether it is 500 or not
+2.check given number is "even-positive" or "odd-positive" or "even-negative" or "even-positive"
+3.get two nos as input and find out biggest number
+4.check given no is float or integer
+5.get 3 nos as i/p and print greatest numbers among those numbers
+6.check given no is divisible by 11 or not
+7.check given number is divisible by both 2 & 5
+
+#CONTROL STATEMENTS:
+1.FOR LOOP
+for i in range(2,11):
+    print(i)
+output:
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+#with jump or step value:
+for j in range(2,11,2):
+    print(j)
+output:
+2
+4
+6
+8
+10
+
+2.WHILE LOOP
+
+#programs:
+using while loop:
+1.print 2-20 even nos
+2.print 1-30 odd nos
+
+#programs:
+using for loop:
+1.print 2-20 even nos
+2.print 1-30 odd nos
+
+#RANDOM NUMBER GUESSING GAME:
+
+
