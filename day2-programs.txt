@@ -1,0 +1,523 @@
+#BASIC BITWISE OPERATORS PROGRAMS:
+12&7
+4
+5^6
+3
+10&4
+0
+10|4
+14
+10^4
+14
+10<<2
+40
+10>>2
+2
+5<<2
+20
+5>>2
+1
+
+#PROGRAM:
+get any 2 no's both the no's should be less than or equal to 15,perform bitwise &,|,^
+enter first  number:5
+enter second number:7
+Bitwise AND of num1,num2 is: 5
+Bitwise OR of num1,num2 is: 7
+Bitwise XOR of num1,num2 is: 2
+
+
+#MULTIPLE LINES IN SINGLE LINE USING LIST(MAP):
+n=int(input("size:"))
+a=list(map(int,input("numbers").strip().split()))[:n]
+print(a)
+output:
+size:5
+numbers:1 2 3 4 5 6 7 
+[1, 2, 3, 4, 5]
+
+
+2.n=int(input("size:"))
+a=list(map(int,input("numbers:").strip().split()))
+print(a)
+output:
+size:5
+numbers:1 2 3 4 5 6 7
+[1, 2, 3, 4, 5, 6, 7]
+
+#program:
+find product of 10 integer numbers
+n=int(input("size:"))
+a=list(map(int,input("numbers:").strip().split()))
+product=1
+for i in a:
+    product=product*i
+print("the product of 10 integers is:",product)
+output:
+size:10
+numbers:1 2 3 4 5 6 7 8 9 10
+the product of 10 integers is: 3628800
+
+n=int(input("size:"))
+a=list(map(int,input("numbers:").strip().split()))
+product=1
+print(a)
+for i in a:
+    product=product*i
+print("the product of 10 integers is:",product)
+output:
+size:5
+numbers:1 2 3 4 5 6 7 8 9 10
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+the product of 10 integers is: 3628800
+
+#END & SEPARATE:
+print('its', 'a', 'gud', 'day')
+print('all','is','gud')
+print('joy')
+output:
+its a gud day
+all is gud
+joy
+
+2.end with space:
+print('its', 'a', 'gud', 'day',end=' ')
+print('all','is','gud',end=' ')
+print('joy')
+output:
+its a gud day all is gud joy
+ 
+3.end without space:
+print('its', 'a', 'gud', 'day',end='')
+print('all','is','gud',end='')
+print('joy')
+output:
+its a gud dayall is gudjoy
+
+4.print('its', 'a', 'gud', 'day',end='@')
+print('all','is','gud',end='@')
+print('joy')
+output:
+its a gud day@all is gud@joy
+
+5.print('its', 'a', 'gud', 'day',sep="###",end=' ')
+print('all','is','gud',end=' ')
+print('joy')
+output:
+its###a###gud###day all is gud joy
+
+6.print('its', 'a', 'gud', 'day',sep="###")
+print('all','is','gud')
+print('joy')
+output:
+its###a###gud###day
+all is gud
+joy
+
+#PRINTING DIFF SHAPES:
+#PROGRAMS:
+1.print hollow triangle(upside down)
+print('* * * * * * *')
+print('*           *')
+print(' *         * ')
+print('  *       *  ')
+print('    *   *    ')
+print('      *      ')
+
+
+2.print hollow heart
+print(' * *      * * ')
+print('*   *    *   *')
+print('*     *      *')
+print(' *          * ')
+print('  *        *  ')
+print('    *    *    ')
+print('      *      ')
+
+
+#PROGRAM:
+#temperature above 45 hottest
+#temperature 40-45 hot
+#temperature 25-40 moderate
+#temperature 10-25 cold
+#temperature beloe 10 chill
+
+temp=int(input("enter temperature:"))
+if temp>45:
+    print("hottest")
+if temp>40 and temp<45:
+    print("hot")
+if temp>25 and temp<40:
+    print("moderate")
+if temp>10 and temp<25:
+    print("cold")
+if temp<10:
+    print("chill")
+output:
+enter temperature:42
+hot
+
+#programs:
+1.get a number as input and find out whether it is 500 or not
+num=int(input('enter a number:'))
+if num==500:
+    print("given number is 500")
+else:
+    print("given number is not 500")
+output:
+enter a number:499
+given number is not 500
+
+2.check given number is "even-positive" or "odd-positive" or "even-negative" or "even-positive"
+num=int(input("enter a number:"))
+if num%2==0:
+    if num>0:
+        print("even-positive")
+    else:
+        print("even-negative")
+if num%2!=0:
+    if num>0:
+      print("odd-positive")
+    else:
+      print("odd-negative") 
+output:
+enter a number:-5
+odd-negative
+
+3.get two nos as input and find out biggest number
+num1,num2=int(input("enter num1:")),int(input("enter num2:"))
+if num1>num2:
+    print("num1 is the biggest number")
+else:
+    print("num2 is the biggest number")
+output:
+enter num1:55
+enter num2:42
+num1 is the biggest number
+
+4.check given no is float or integer
+n=10.3
+res=n-int(n)
+if res>0:
+    print("the given number is float")
+else:
+    print("the given number is int")
+output:
+the given number is float
+
+5.get 3 nos as i/p and print greatest numbers among those numbers
+n1,n2,n3=int(input("enter n1:")),int(input("enter n2:")),int(input("enter n3:"))
+if n1>n2 and n1>n3:
+       print("n1 is the greatest number")
+elif n2>n3:
+        print("n2 is the greatest number")
+else:
+    print("n3 is the greatest number")
+ output:
+ enter n1:4
+enter n2:5
+enter n3:3
+n2 is the greatest number
+   
+6.check given no is divisible by 11 or not
+num=int(input("enter a number:"))
+if num%11==0:
+    print("the given number is divisible by 11")
+else:
+    print("the given number is not divisible by 11")
+output:
+enter a number:120
+the given number is not divisible by 11
+
+7.check given number is divisible by both 2 & 5
+num=int(input("enter a number:"))
+if num%2==0 and num%5==0:
+    print("the given number is divisible by both 2 and 5")
+else:
+    print("the given number is not divisible by both 2 and 5")
+output:
+enter a number:55
+the given number is not divisible by both 2 and 5
+
+#CONTROL STATEMENTS PROGRAMS:
+#programs:
+using while loop:
+1.print 2-20 even nos
+n=2
+while n<=20:
+    print(n)
+    n=n+2
+output:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+method-2:
+n=2
+while n<=20:
+    if n%2==0:
+       print(n)
+    n=n+1
+output:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+method-3:
+num1=int(input("enter a number:"))
+num2=int(input("enter a number:"))
+while num1<=num2:
+    if num1%2==0:
+       print(num1)
+    num1=num1+1
+output:
+enter a number:2
+enter a number:20
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+
+2.print 1-30 odd nos
+n=1
+while n<=30:
+    print(n)
+    n=n+2
+output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+ 
+method-2:
+n=1
+while n<=30:
+    if n%2!=0:
+       print(n)
+    n=n+1
+output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+ 
+method-3:
+num1=int(input("enter a number:"))
+num2=int(input("enter a number:"))
+while num1<=num2:
+    if num1%2!=0:
+       print(num1)
+    num1=num1+1
+output:
+enter a number:1
+enter a number:30
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+#programs:
+using for loop:
+1.print 2-20 even nos
+for i in range(2,22,2):
+    print(i)
+output:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+method-2:
+for i in range(2,22):
+    if i%2==0:
+        print(i)
+        i=i+1
+output:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+method-3:
+num1=int(input("enter a number:"))
+num2=int(input("enter a number:"))
+for i in range(num1,num2):
+    if num1%2==0:
+       print(num1)
+    num1=num1+1
+output:
+enter a number:2
+enter a number:22
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+2.print 1-30 odd nos
+for j in range(1,31,2):
+    print(j)
+output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+method-2:
+for i in range(1,31,2):
+    if i%2!=0:
+        print(i)
+        i=i+1
+output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+ 
+method-3:
+num1=int(input("enter a number:"))
+num2=int(input("enter a number:"))
+for i in range(num1,num2):
+    if num1%2!=0:
+       print(num1)
+    num1=num1+1
+output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+#RANDOM NUMBER GUESSING GAME:
+import random
+n=random.randrange(1,50)
+guess=int(input("enter any number:"))
+while n!=guess:
+    if guess<n:
+        print("too low")
+        guess=int(input("enter number again"))
+    elif guess>n:
+        print("two high")
+        guess=int(input("enter number again"))
+    else:
+        break
+print("you guessed it right!!")
+
+OUTPUT:
+enter any number:7
+too low
+enter number again30
+two high
+enter number again20
+too low
+enter number again25
+too low
+enter number again27
+too low
+enter number again29
+two high
+enter number again28
+you guessed it right!!
