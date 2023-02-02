@@ -1,0 +1,173 @@
+LIST:
+array->limitation-same datatype
+list->adavced array concept where we can store different datatypes
+2.lists are created using square brackets
+3.duplication is allowed
+
+
+#operations we perform on lists(list functions):
+1.append()-add an element(1 element) at the end of the list->l.append(4)
+2.extend()-add two or more elements to a listl.extend([100,200,300]) 
+3.insert()-insert an element at the defined index->l.insert(6,33)
+4.remove()-removes an item feom the list->l.remove(1)
+5.pop()-removes and returns an element at given index->l.pop(-5)
+6.clear()-removes all items from the list->l.clear()
+7.index()-returns the index of the first matched item->l.index(33)
+8.count()-returns the count of number of items in the list->l.count(1)
+9.sort()-sort items in the list in ascending order->l.sort()
+10.reverse()-reverse the order of items in the list->l.reverse()
+11.copy()-returns the shallow copy of the list->l1=l.copy()
+
+programs:
+1.create a list with 10 items and print elements one by one.
+2.create a list with 5 float numbers find out and display sum & total & average.
+3.After creating a list with 6 elements from user,Extract only even numbers and print.
+4.create a list from user input and print only even numbers.
+5.get list of no.s as input,return the product if the product less than 750,else return the sum.
+
+LIST COMPREHENSION:
+numbers=[elements for elements in "GREAT AFTERNOON"]
+print(numbers)
+output:
+['G', 'R', 'E', 'A', 'T', ' ', 'A', 'F', 'T', 'E', 'R', 'N', 'O', 'O', 'N']
+can create list using existing list
+l=["hyd","vizag","chennai","vijayawada"]
+city=[]
+for n in l:
+    if "v" in n:
+        city.append(n)
+print(city)
+output:
+['vizag', 'vijayawada']
+
+l1=[2**x for x in range(2,10)]
+print(l1)
+output:
+[4, 8, 16, 32, 64, 128, 256, 512]
+
+
+l2=[a for a in range(100,201,20)]
+print(l2)
+output:
+[100, 120, 140, 160, 180, 200]
+
+l3=[1,2,3,4,5,6]
+l4=[i for i in l3 if (i<5)]
+print(l4)
+output:
+[1, 2, 3, 4]
+
+SET:
+#SET PROPERTIES
+1.In set duplication is not allowed(duplication elements not allowed)
+2.sets are created using curly bracs
+3.set is unordered 
+4.indexing concept is not present
+ 
+#SET FUNCTIONS:
+add()=s.add(element)
+s={1,2,3,4,5}
+s.add(58)
+s
+{1, 2, 3, 4, 5, 58}
+update([])=s.update([20,40])
+s.update([20,40])
+s
+{1, 2, 3, 4, 5, 20, 40, 58}
+discard()=s.discard(element)
+s.discard(4)
+s
+{1, 2, 3, 5, 20, 40, 58}
+remove()-get error is element not present->s.remove()
+s.remove(3)
+s
+{1, 2, 5, 6}
+UNION=s1|s2
+s1={1,2,3,4,5,6}
+s2={4,5,6,7,8,9}
+s1|s2
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+INTERSECTION=s1&s2
+{4, 5, 6}
+DIFFERENCE=s1-s2
+{1, 2, 3}
+
+Superset:set must have all elements present in the another set
+ex:
+s={1,2,3,}
+s1={1,2,3,4}
+s1.issuperset(s)
+True
+ 
+SYMMETRIC DIFFERENCE:give the elements which are not present in common
+ex:
+s1={1,2,3,4,5,10}
+s2={4,1,9,2,10}
+s1^s2
+{3, 5, 9}
+
+TUPLE:
+()
+ordered
+unchangable
+cant include items
+can fetch using t[index]
+methods--count and index
+count-elements no.of occurences
+index-returns
+
+#example:
+t=(4,3,4,9.6,"ice cream")
+type(t)
+<class 'tuple'>
+t.count(4)
+2
+t.index(4)
+0
+
+#DICTIONARY:{}
+dictionary contains elements with 2 units "keys" and "values"
+ and keys must be unique
+d.keys()
+d.values()
+d.items()
+ex:
+d={1:"one",2:"two"}
+d
+{1: 'one', 2: 'two'}
+type(d)
+<class 'dict'>
+d.keys()
+dict_keys([1, 2])
+d.values()
+dict_values(['one', 'two'])
+d.items()
+dict_items([(1, 'one'), (2, 'two')])
+d.get(1)
+'one'
+d.get(2)
+'two'
+l=['hi','hello']
+dict.fromkeys(l)
+{'hi': None, 'hello': None}
+dict.fromkeys(l,50)
+{'hi': 50, 'hello': 50}
+d={1:'a',2:'b'}
+d.setdefault(3,d)
+{1: 'a', 2: 'b', 3: {...}}
+ 
+#dict methods:
+d.items()-returns all pairs
+d.update({'c',89})--add one or more items
+d.pop('b')--fetch and remove item
+d.popitem()--fetch and remove recently added item
+d.setdefault('angel',700)--if the key is not in dic-will be added or nothing will be done
+NOTE:value is optional -->d.setdefault(2)is valid
+
+
+#NESTING IN TUPLE:
+tp1=('keep','qworking')
+tp2=(10,20)
+t3=(tp1,tp2)
+t3
+(('keep', 'qworking'), (10, 20))
