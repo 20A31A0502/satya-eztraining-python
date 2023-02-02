@@ -1,0 +1,101 @@
+#DICT COMPREHENSIONS:
+creating new dictionary from previous existing dictionary
+d={n:n*n for n in range(1,5)}
+print(d)
+output:
+{1: 1, 2: 4, 3: 9, 4: 16}
+
+#calculating product price for 5 units
+old={'rice':60,'dhaal':120,'oil':150}
+new={product:price*5 for (product,price)in old.items()}
+print(new)
+output:
+{'rice': 300, 'dhaal': 600, 'oil': 750}
+
+#with checks
+real={'sam':24,'angel':18,'kumar':35}
+now={name:age for (name,age) in real.items()if age>20}
+print(now)
+output:
+{'sam': 24, 'kumar': 35}
+
+#PROGRAM
+create a list with 8 customer names and display a dict which has customer names along with discounts for them from a particular shop
+
+#CREATING DICT FROM LISTS USING ZIP:
+l1=['a','b','c']
+l2=[1,2,3]
+d={a:b for(a,b) in zip(l1,l2)}
+print(d)
+output:
+{'a': 1, 'b': 2, 'c': 3}
+ 
+#PROGRAM:
+create 2 lists 1st list should have 5 students names and 2nd list should have students marks(1-500) so now dispaly a dict should contain their percentage
+students=keys,marks=values
+
+#diff concept
+"hi i'am "sam""
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+'hi i'am 'sam''
+SyntaxError: unterminated string literal (detected at line 1)
+n="hi i'am"
+n
+"hi i'am"
+nm='hi i\'am'
+nm
+"hi i'am"
+nm='hi i'am'
+
+#STRING:
+Methods:
+upper():Converts string into upper case
+lower() or casefoldd() :Converts string into lower case
+capatilize():Converts the first character to upper case
+replace():Returns a string where a specified value is replaced with a specified value
+strip():Returns a trimmed version of the string
+split():Splits the string at the specified separator, and returns a list
+center():Returns a centered string
+will fix total length then fix string in center and fill other empty spaces with fillchar ->s.center(width,fillchar) 
+count():Returns the number of times a specified value occurs in a string->s.count("a
+",3,len(s))---here 5 beginning of s and till end of str it will checked 
+endswith():Returns true if the string ends with the specified value->s.endswith("a",0,len(s))--check string ends with a or not
+find():Searches the string for a specified value and returns the position of where it was found->s.find("a",3,len(s))--check a and returns index value of first occurence of
+index():Searches the string for a specified value and returns the position of where it was found
+->s.index("a",3,len(s))--from 3 to end where a there returns first occurence of that characters index
+s.islower()/s.isupper()/s.istitle()-all words start be caps/max(s)-returns greater char like a>b>c....>z
+min(s)--space is lesser then a<b<c...
+s.startswith("hello",0,len(s))
+s.rfind("a",0,len(s)--from reverse first occurence or last occurence
+
+
+#MUTABLE AND IMMUTABLE:
+MUTABLE:can be changed after creation->ex:
+int,float,string,bool,tuple
+IMMUTABLE:cannot be changed after creation
+ex:
+list,set,dict
+
+#PROGRAMS:
+1.get one string as input along with character find out and display whether the character is present or not
+2.check whether the given string is palindrome or not
+3.check if the string contains space or not if yes count the  no.of spaces
+4.create a list as vowels and get a string as input and count vowels from the string and display it 
+
+#MATH MODULE
+import math
+print("CEIL 12.5:",math.ceil(12.5))      
+CEIL 12.5: 13
+print("FLOOR 12.5:",math.floor(12.5))
+CEIL 12.5: 12
+print("SQRT 12.5:",math.sqrt(12.5))      
+CEIL 12.5: 3.5355339059327378
+print("FACTORIAL 3:",math.factorial(3))     
+CEIL 3: 6
+print("POWER  2,3:",math.pow(2,3))     
+POWER  2,3: 8.0
+print("REMAINDER 10,3:",math.fmod(10,3))      
+REMAINDER 10,3: 1.0
+a,b=divmod(10,3)      
+print(a,b)
+3 1
