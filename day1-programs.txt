@@ -1,0 +1,277 @@
+#Creating variable:
+my_name=1
+_name=1
+my_name=1
+my_name
+1
+_name=1
+_name
+1
+0name=1
+SyntaxError: invalid decimal literal
+if=1
+SyntaxError: invalid syntax
+name=1
+Name
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    Name
+NameError: name 'Name' is not defined. Did you mean: 'name'?
+n12d=1
+n12d
+1
+
+#DATATYPES:
+type("satya")
+<class 'str'>
+type(1)
+<class 'int'>
+type(10+5j)
+<class 'complex'>
+type('s')
+<class 'str'>
+id(56)
+2454952216528
+
+#ISINSTANCE:
+isinstance(46,float)
+False
+isinstance("satya",str)
+True
+
+#TYPE CONVERSIONS:
+int(56.7)
+56
+float(177)
+177.0
+
+a=10
+print("the value is"+str(a))
+the value is10
+print("the value is:",a)
+the value is: 10
+
+#PROGRAM:
+take 3 int nos,3 float nos,2 string nos & 1 complex no as input,print same
+note:use formatted output
+int1=int(input("enter first integer:"))
+int2=int(input("enter second integer:"))
+int3=int(input("enter third integer:"))
+print("\n")
+f1=float(input("enter first float no:"))
+f2=float(input("enter second float no:"))
+f3=float(input("enter third float no:"))
+print("\n")
+str1=(input("enter first string:"))
+str2=(input("enter second string:"))
+print("\n")
+c1=complex(input("enter first complex number:"))
+print("\n")
+print("\n output \n")
+print("first integer",int1)
+print("second integer:",int2)
+print("third integer:",int3)
+print("first float no:",f1)
+print("second float no:",f2)
+print("third float no:",f3)
+print("first string no:",str1)
+print("second string no:",str2)
+print("first complex no:",c1)
+
+output:
+enter first integer:2
+enter second integer:3
+enter third integer:4
+
+
+enter first float no:2.3
+enter second float no:3.69
+enter third float no:4.76
+
+
+enter first string:satya
+enter second string:karthik
+
+
+enter first complex number:10
+
+
+
+ output 
+
+first integer 2
+second integer: 3
+third integer: 4
+first float no: 2.3
+second float no: 3.69
+third float no: 4.76
+first string no: satya
+second string no: karthik
+first complex no: (10+0j)
+
+
+#PROGRAMS:
+1.kumar is buying 75 kgs candy and half of it he gives to his friend sam,sam returns to kumar half in what she got.now how much candy kumar is having
+kumar=75
+sam=kumar/2
+kumar=kumar-sam/2
+print(kumar)
+sam=sam/2
+print(sam)
+print(kumar+sam)
+output:
+56.25
+18.75
+75.0
+
+2.with 3 times of 36.32 you have to add 56.19 and subtract 10 from the total,print final result
+(3*36.32+56.19)-10
+output:
+155.15
+
+3.multiply one +ve no with one -ve floating point no and find out the result
+56*(-34.45)
+output:
+-1929.2000000000003
+
+#UNICODE FOR TELUGU LETTERS:
+print(chr(3128)+chr(3108)+chr(3149)+chr(3119))
+సత్య
+print(chr(3093)+chr(3149)+chr(3127)+chr(3149)+chr(3118)+chr(3136))
+క్ష్మీ
+print(chr(3077)+chr(3112)+chr(3074)+chr(3108)+chr(3122)+chr(3093)+chr(3149)+chr(3127)+chr(3149)+chr(3118)+chr(3136))
+అనంతలక్ష్మీ
+
+
+#OPERATORS:
+1.ARITHMETIC OPERATORS:+,-,*,/,%,**,//
+addition->X+Y
+subtraction->X-Y
+multiplication->X*Y
+division->X/Y
+modulus->X%Y
+exponentiation->X**Y
+floor division->X//Y
+10+2
+12
+10-2
+8
+10*2
+20
+10/2
+5.0
+10%2
+0
+10**2
+100
+10//2
+5
+
+2.ASSIGNMENT OPERATORS:=,+=,-=,*=,/=,%=,//=,**=,&=,|=,^=,>>=,<<=
+X=5
+X=X+3
+X=X-3
+X=X/3
+X=X*3
+X=X%3
+X=X//3
+X=X**3
+X=X&3
+X=X|3
+X=X^3
+X=X>>3
+X=X<<3
+
+3.COMPARISON OPERATORS:==,!=,>,<,<=,>=
+1.EQUAL-X==Y
+2.NOT EQUAL-X!=Y
+3.LESS THAN-X<Y
+4.GREATER THAN-X<Y
+5.LESS THAN OR EQUAL TO-X<=Y
+6.GREATER THAN OR EQUAL TO-X>=Y
+
+4.LOGICAL OPERATORS:
+AND-x<5 and x<10
+OR-x<5 or x<4
+NOT-not(x<4 and x>10)
+
+5.IDENTITY OPERATORS:
+IS-x is y
+ISNOT-x is not y
+
+6.MEMBERSHIP OPERATORS:
+IN-x in y
+NOT IN-x not in y
+
+7.BITWISE OPERATORS
+
+#MULTIPLE INPUTS IN SINGLE LINE:
+n1,n2=int(input("enter")),int(input("enter"))
+print(n1)
+print(n2)
+s=n1+n2
+print(s)
+ output:
+enter5
+enter6
+11
+
+n1,n2=int(input("enter")),int(input("enter"))
+print(n1,n2)
+output:
+enter5
+enter6
+5 6
+
+
+#GIVE INPUTS SEPARATED BY COMMA:
+SPLIT METHOD:
+a,b=input("enter").split(",")
+print(a)
+print(type(a))
+print(a,b)
+output:
+enter5,6
+5
+<class 'str'>
+5 6
+
+a,b=input("enter").split()
+print(int(a)+int(b))
+enter5 4
+9
+
+#PROGRAMS:
+1.swap two numbers using temp value
+x=10
+y=20
+temp=x
+x=y
+y=temp
+print("the value of x after swapping is :",x)
+print("the value of y after swapping is :",y)
+output:
+the value of x after swapping is : 20
+the value of y after swapping is : 10
+
+2.swap two numbers without using temp value
+x=10
+y=20
+x,y=y,x
+print("the value of x after swapping is :",x)
+print("the value of y after swapping is :",y)
+output:
+the value of x after swapping is : 20
+the value of y after swapping is : 10
+
+
+3.find are of rectangle after getting length and breadth of a rectangle[l*b]
+4.find perimeter of rectangle[2(l+b)]
+length=6
+breadth=9
+area=length*breadth
+perimeter=2*(length+breadth)
+print("the area of rectangle is:",area)
+the area of rectangle is: 54
+print("the perimeter of rectangle is:",perimeter)
+the perimeter of rectangle is: 30
