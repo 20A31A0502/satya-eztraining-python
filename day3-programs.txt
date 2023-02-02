@@ -1,0 +1,216 @@
+#list example program:
+l=[1,4,7.4,"sam"]
+l
+[1, 4, 7.4, 'sam']
+l[3]
+'sam'
+l[2:3]
+[7.4]
+l[2:4]
+[7.4, 'sam']
+l[0:]
+[1, 4, 7.4, 'sam']
+l[:3]
+[1, 4, 7.4]
+l[-1]
+'sam'
+l[::-1]
+['sam', 7.4, 4, 1]
+
+
+#list functions:
+l=[1,4,1,1,6,4,1,2]
+l.append(400)
+l
+[1, 4, 1, 1, 6, 4, 1, 2, 400]
+l.extend([100,200,300])
+l
+[1, 4, 1, 1, 6, 4, 1, 2, 400, 100, 200, 300]
+l.insert(6,33)
+l
+[1, 4, 1, 1, 6, 4, 33, 1, 2, 400, 100, 200, 300]
+l.insert(-5,55)
+l
+[1, 4, 1, 1, 6, 4, 33, 1, 55, 2, 400, 100, 200, 300]
+l.remove(1)
+l
+[4, 1, 1, 6, 4, 33, 1, 55, 2, 400, 100, 200, 300]
+l.pop(-5)
+2
+l.pop(-5)
+55
+l
+[4, 1, 1, 6, 4, 33, 1, 400, 100, 200, 300]
+l.index(1)
+1
+l.index(33)
+5
+len(l)
+11
+l.count(1)
+3
+l.sort()
+l
+[1, 1, 1, 4, 4, 6, 33, 100, 200, 300, 400]
+l.reverse()
+l
+[400, 300, 200, 100, 33, 6, 4, 4, 1, 1, 1]
+l.clear()
+l
+[]
+l=[1,4,1,1,6,4,1,2]
+l1=[1,2,3,4,5,6,7,8]
+l1=l.copy()
+l
+[1, 4, 1, 1, 6, 4, 1, 2]
+l1
+[1, 4, 1, 1, 6, 4, 1, 2]
+
+
+#programs:
+1.create a list with 10 items and print elements one by one.
+L=[1,2,3,2,4,5,6]
+
+for i in range (len(L)):
+    print(L[i])
+   
+2.create a list with 5 float numbers find out and display sum  & average.
+l=[1.2,3.4,5.6,7.8,9.10]
+sum=0
+for i in l:
+   sum=sum+i
+print(sum)
+average=sum/2
+print(average)
+
+3.After creating a list with 6 elements from user,Extract only even numbers and print.
+l=[1,2,3,4,5,6]
+for i in l:
+    if(i%2==0):
+        print(i)
+ 
+4.create a list from user input and print only even numbers.
+size=int(input("size:"))
+l=[]
+for i in range(size):
+    ele=int(input("element:"))
+    l.append(ele)
+print(l)
+for j in l:
+    if(j%2==0):
+        print(j)
+
+5.get list of no.s as input,return the product if the product less than 750,else return the sum.
+#size is not given
+list=list(map(int,input("elements:").strip().split()))
+product=1
+sum=0
+print(list)
+for i in list:
+    product=product*i
+    sum=sum+i
+if product<=750:
+    print("product of elements in the list is:",product)
+else:
+    print("sum of elements in the list is",sum)
+#size is given
+size=int(input("size:"))
+l=[]
+product=1
+sum=0
+for i in range(size):
+    ele=int(input("element:"))
+    l.append(ele)
+print(l)
+for i in l:
+    product=product*i
+    sum=sum+i
+if product<=750:
+    print("product of elements in the list is:",product)
+else:
+    print("sum of elements in the list is",sum)
+
+#SET FUNCTIONS:
+s={1,2,3,4,5}
+s.add(58)
+s
+{1, 2, 3, 4, 5, 58}
+s.update([20,40])
+s
+{1, 2, 3, 4, 5, 20, 40, 58}
+s.discard(4)
+s
+{1, 2, 3, 5, 20, 40, 58}
+s={1,6,2,3}
+s.add(5)
+s
+{1, 2, 3, 5, 6}
+s.remove(3)
+s
+{1, 2, 5, 6}
+s.discard(4)
+s
+{1, 2, 5, 6}
+s.remove(4)
+output:
+error
+
+#union,intersection,difference,superset,symmetric differnce problems:
+s1={1,2,3,4,5,6}
+s2={4,5,6,7,8,9}
+s1|s2
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+s1&s2
+{4, 5, 6}
+s1-s2
+{1, 2, 3}
+s={1,2,3,}
+s1={1,2,3,4}
+s1.issuperset(s)
+True
+s1={1,2,3,4,5,10}
+s2={4,1,9,2,10}
+s1^s2
+{3, 5, 9}
+
+#TUPLE EXAMPLE:
+t=(4,3,4,9.6,"ice cream")
+type(t)
+<class 'tuple'>
+t.count(4)
+2
+t.index(4)
+0
+
+#DICTIONARY EXAMPLE:
+d={1:"one",2:"two"}
+d
+{1: 'one', 2: 'two'}
+type(d)
+<class 'dict'>
+d.keys()
+dict_keys([1, 2])
+d.values()
+dict_values(['one', 'two'])
+d.items()
+dict_items([(1, 'one'), (2, 'two')])
+d.get(1)
+'one'
+d.get(2)
+'two'
+l=['hi','hello']
+dict.fromkeys(l)
+{'hi': None, 'hello': None}
+dict.fromkeys(l,50)
+{'hi': 50, 'hello': 50}
+d={1:'a',2:'b'}
+d.setdefault(3,d)
+{1: 'a', 2: 'b', 3: {...}}
+
+
+#Nesting in tuple:
+tp1=('keep','qworking')
+tp2=(10,20)
+t3=(tp1,tp2)
+t3
+(('keep', 'qworking'), (10, 20))
