@@ -1,0 +1,261 @@
+#DICT COMPREHENSIONS:
+d={n:n*n for n in range(1,5)}
+print(d)
+output:
+{1: 1, 2: 4, 3: 9, 4: 16}
+
+#calculating product price for 5 units
+old={'rice':60,'dhaal':120,'oil':150}
+new={product:price*5 for (product,price)in old.items()}
+print(new)
+output:
+{'rice': 300, 'dhaal': 600, 'oil': 750}
+
+#with checks
+real={'sam':24,'angel':18,'kumar':35}
+now={name:age for (name,age) in real.items()if age>20}
+print(now)
+output:
+{'sam': 24, 'kumar': 35}
+
+#PROGRAM
+create a list with 8 customer names and display a dict which has customer names along with discounts for them from a particular shop
+import random
+cust=['sam','smith','nila','satya','karthik','navya','revathi','jaya']
+cust_dict={names:random.randint(1,100) for names in cust}
+print(cust_dict)
+output:
+{'sam': 90, 'smith': 46, 'nila': 22, 'satya': 20, 'karthik': 95, 'navya': 27, 'revathi': 82, 'jaya': 18}
+
+#PROGRAM:
+create 2 lists 1st list should have 5 students names and 2nd list should have students marks(1-500) so now dispaly a dict should contain their percentage
+students=keys,marks=values
+import random
+stud_names=list(map(str,input('enter names:').split()))
+marks=[]
+for i in range(len(stud_names)):
+    a=(random.randint(300,500)/500)*100
+    marks.append(a)
+dict={x:y for (x,y) in zip(stud_names,marks)}
+print(dict)
+output:
+enter names:satya karthik revathi jaya
+{'satya': 76.8, 'karthik': 91.2, 'revathi': 75.4, 'jaya': 96.2}
+
+->input is given
+s=['satya','revathi',"karthik","jaya","navya"]
+marks=[450,400,350,345,300]
+product=[]
+for i in marks:
+   p=(i/500)*100
+   product.append(p)
+dict={x:y for (x,y) in zip(s,product)}
+print(dict)
+output:
+{'satya': 90.0, 'revathi': 80.0, 'karthik': 70.0, 'jaya': 69.0, 'navya': 60.0}
+
+#STRING METHODS():
+s="satya"
+s.upper()
+'SATYA'
+s="Satya"
+s.upper()
+'SATYA'
+s.lower()
+'satya'
+s.capitalize()
+'Satya'
+s.replace()
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    s.replace()
+TypeError: replace expected at least 2 arguments, got 0
+s.replace(t,"a")
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    s.replace(t,"a")
+NameError: name 't' is not defined
+s.replace('t','a')
+'Saaya'
+s.strip()
+'Satya'
+s="  sat ya"
+s.strip()
+'sat ya'
+s.split()
+['sat', 'ya']
+s.split('a')
+['  s', 't y', '']
+s.center(31,'a')
+'aaaaaaaaaaaaasatyaaaaaaaaaaaaaa'
+s.count(a)
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    s.count(a)
+NameError: name 'a' is not defined
+s.count("a")
+2
+s.count("a",3.len(s))
+SyntaxError: invalid decimal literal
+s.count("a",3,len(s))
+1
+s.endswith("a",0,len(s))
+True
+s.endswith("k",0,len(s))
+False
+s.find("a",3,len(s))
+4
+s.index("a",3,len(s))
+4
+s="satya"
+s.islower()
+True
+s="satya"
+s.isupper()
+False
+s.istitle()
+False
+s="Satya"
+s.istitle()
+True
+min(s)
+'S'
+s="satya"
+s.startswith("hello",0,len(s))
+False
+s.rfind("a",0,len(s))
+4
+
+
+#MUTABLE AND IMMUTABLE:
+X=20
+X
+20
+X=30
+X
+30
+id("X")
+140711905629448
+r=200
+r
+200
+id("r")
+140711904461440
+r=r+r
+r
+400
+id("r")
+140711904461440
+l=[1,2,4]
+id("l")
+140711904339128
+l.append(45)
+l
+[1, 2, 4, 45]
+
+#PROGRAMS:
+1.get one string as input along with character find out and display whether the character 
+is present or not
+#iteration logic
+s=input('enter:')
+c=input()
+for i in s:
+    if i==c:
+        flag=1
+        break
+    else:
+        flag=0
+if flag==1:
+    print('it is present')
+else:
+    print('not present')
+output:
+enter:good day
+d
+it is present
+
+#check whether character without iteration
+s=input('enter:')
+c=input()
+if c in s:
+   print("character is present")
+else:
+   peint("character is not present")
+output:
+enter:good day
+d
+character is present
+
+#method-3:
+s=input('enter:')
+c=input('enter char:')
+a="yes" if c in s else no
+print(a)
+output:
+enter:good
+enter char:g
+yes
+
+
+2.check whether the given string is palindrome or not
+s=input("string:")
+s=s.lower()
+n=len(s)
+b=True
+for i in range(n):
+  if(s[i]==s[n-1]):
+     n-=1
+  else:
+     b=False
+     break
+if b==False:
+   print("Given string is not palindrome")
+else:
+   print("Given string is palindrome")
+output:
+string:noon
+Given string is palindrome
+
+
+
+3.check if the string contains space or not if yes count the  no.of spaces
+s=input("enter a string:")
+count=0
+for i in range(len(s)):
+   if s[i]==" ":
+      count+=1 
+print(count)
+output:
+enter a string:sa tya
+1
+
+4.create a list as vowels and get a string as input and count vowels from the string and display it 
+l=['A','E','I','O','U','a','e','i','o','u']
+s=input("enter the string:")
+count=0
+for i in s:
+   if i in l:
+      count=count+1
+print(count)
+output:
+enter the string:
+satyakarthik
+4
+
+#MATH MODULE
+import math
+print("CEIL 12.5:",math.ceil(12.5))      
+CEIL 12.5: 13
+print("FLOOR 12.5:",math.floor(12.5))
+CEIL 12.5: 12
+print("SQRT 12.5:",math.sqrt(12.5))      
+CEIL 12.5: 3.5355339059327378
+print("FACTORIAL 3:",math.factorial(3))     
+CEIL 3: 6
+print("POWER  2,3:",math.pow(2,3))     
+POWER  2,3: 8.0
+print("REMAINDER 10,3:",math.fmod(10,3))      
+REMAINDER 10,3: 1.0
+a,b=divmod(10,3)      
+print(a,b)
+3 1
