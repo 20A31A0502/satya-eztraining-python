@@ -1,0 +1,69 @@
+EXCEPTIONS:
+Exception is an abnormal condition.An exception is an event that disrupts the normal flow of the program. 
+It is an object which is thrown at runtime.
+EXCEPTION HANDLING:
+Whwn there is an exception the developer does not want interruptions/disturbance in the program
+flow to acheive this we are using exception handling.
+Ex:
+a=100
+b=0
+#you are telling this may have error so you use try 
+try:
+    print(a/b)
+#except Exception : you are saying if an error there is  an error please handle it
+#and execute the program util the end
+except Exception as e:
+    print("Please note number can't be divided by 0;",e)
+#to check whether the code is running until the end or not 
+print("Over")
+Output:
+Please note number can't be divided by 0; division by zero
+Over
+
+#With finally block
+a=10
+b=0
+try:
+    print(a/b)
+except Exception as e:
+    print("Please note number can't be divided by 0;",e)
+#will get executed if there error or  not 
+finally:
+    print("Program Over")
+Output:
+Please note number can't be divided by 0; division by zero
+Program Over
+
+#raise is used to interrupt program flow and raise an exception
+try:
+    raise NameError("Hello")
+except NameError:
+    print("There is an exception")
+Output:
+There is an exception
+
+OOPS IN PYTHON:
+Its an efficient concept used in all object oriented programming languages like java and python
+for multiple reasons we use oops concepts
+For example code reusability,data security,hiding data
+
+CLASS:
+Its like a blueprint 
+Ex:Birds,Laptop
+OBJECT:
+Its a thing created bsed on class
+Note:One class can have multiple objects
+Ex:Birds(Class)---> Sparrow,Dove,Parrot(Objects)
+Laptop(Class)---> Dell,Apple,Lenovo(Objects) 
+
+Ex:
+class computer:     #class definition
+    def config(self):#config is a function
+        print("Yes")
+lenovo=computer()   #object1
+lenovo.config()
+dell=computer()     #object2
+dell.config()
+Output:
+Yes
+Yes

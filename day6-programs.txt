@@ -1,0 +1,105 @@
+PROGRAMS ON EXCEPTION HANDLING:
+a=10
+try:
+    b=int(input("Number:"))
+    print(a/b)
+except ZeroDivisionError as e:
+    print("Please note number can't be divided by 0;",e)
+except ValueError as e:
+    print("Invalid input;",e)
+except Exception as e:
+    print("Other error;",e)
+finally:
+    print("Program Over")
+Output:
+Number:5.0
+
+#raise is used to interrupt program flow and raise an exception
+x=int(input("Number:"))
+if x%2!=0:
+    raise Exception("x should be even number")
+else:
+    print("x is an even number")
+Output:
+Invalid input; invalid literal for int() with base 10: '5.0'
+Program Over
+
+#Raise function in exception handling
+x=int(input("Number:"))
+try:
+    if x%2!=0:
+        raise Exception("x should be even number")
+except Exception as e:
+    print("Given number is odd number so",e)
+else:
+    print("x is an even number")
+Output:
+Number:6
+x is an even number
+
+#method-2
+x=int(input("Number:"))
+try:
+    if x%2!=0:
+        raise Exception("x should be even number")
+    else:
+        print("x is an even number")
+except Exception as e:
+    print("Given number is odd number so",e)
+Output:
+Number:5
+Given number is odd number so  x should be even number
+
+PROGRAMS ON CLASS:
+class computer:     #class definition
+    def config(self):#config is a function
+        print("Yes")
+lenovo=computer()   #object1
+lenovo.config()
+dell=computer()     #object2
+dell.config()
+
+#Constructor method in class
+class Employee:
+    def _init_(self,name,id):
+        self.id=id
+        self.name=name
+    def display(self):
+        print("Id: %d \nName: %s" %(self.id,self.name))
+        print(self.id,self.name)
+        print((self.id,self.name))
+emp1=Employee("John",101)
+emp2=Employee("David",102)
+emp1.display()
+emp2.display()
+Output:
+Id: 101 
+Name: John
+101 John
+(101, 'John')
+Id: 102 
+Name: David
+102 David
+(102, 'David')
+
+#variables and var.access in class and method
+class computer1:     #class definition
+    a=10
+    b=40
+    print("Class variables inside the class",a,b)
+    def config(self):#config is a function
+        print("Yes")
+        print("Instance access ",self.b)
+lenovo=computer1()   #object1
+print(lenovo.a)
+print(lenovo.a+lenovo.b)
+dell=computer1()     #object2
+print("Dell",dell.a)
+dell.config()
+Output:
+Class variables inside the class 10 40
+10
+50
+Dell 10
+Yes
+Instance access  40
