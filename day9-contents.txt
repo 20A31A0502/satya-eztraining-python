@@ -1,0 +1,24 @@
+#DLL Deletion at begining:
+def delete_start(self):    
+    temp=self.head
+    self.head=temp.next
+    temp.next=None
+
+#DLL Deletion at end:
+def delete_end(self):    
+    temp=self.head,next
+    prev=self.head
+    while temp.next is not None:
+        temp=temp.next
+        prev=prev.next
+    prev.next=None
+
+#DLL Deletion at position:
+def delete_position(self,pos): 
+    temp=self.head,next
+    prev=self.head
+    for i in range(1,pos-1):
+        temp=temp.next
+        prev=prev.next
+    prev.next=temp.next
+    temp.next=None
