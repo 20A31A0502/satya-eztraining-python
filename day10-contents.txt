@@ -1,0 +1,14 @@
+#STACK:
+follows LIFO(LAST IN FIRST OUT)
+insertion-push
+deletion-pop
+in stack,when the given size is exceeded--overflow
+in stack,when the given list or array is empty--underflow
+
+
+#QUEUE:
+Follows FIFO(FIRST IN FIRST OUT)
+1.Enqueue-insertion
+2.Dequeue-deletion
+insertion(add)-put
+deletion(pop)-get
