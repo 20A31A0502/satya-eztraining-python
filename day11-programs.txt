@@ -1,0 +1,253 @@
+#CREATING BINARY TREE:
+class Binarytreenode:
+    def __init__(self,data):
+        self.data=data
+        self.leftchild=None
+        self.rightchile=None
+node1=Binarytreenode(50)
+node2=Binarytreenode(20)
+node3=Binarytreenode(45)
+node4=Binarytreenode(11)
+node5=Binarytreenode(15)
+node6=Binarytreenode(30)
+node7=Binarytreenode(78)
+
+node1.leftchild=node2
+node1.rightchild=node3
+node2.leftchild=node4
+node2.rightchild=node5
+node3.leftchild=node6
+node3.rightchild=node7
+
+print("Root node is:")
+print( node1.data)
+print("left child of the node is:")
+print(node1.leftchild.data)
+print("right child of the node is:")
+print(node1.rightchild.data)
+print("Node is:")
+print( node2.data)
+print("left child of the node is:")
+print(node2.leftchild.data)
+print("right child of the node is:")
+print(node2.rightchild.data)
+print("Node is:")
+print( node3.data)
+print("left child of the node is:")
+print(node3.leftchild.data)
+print("right child of the node is:")
+print(node3.rightchild.data)
+OUTPUT:
+Root node is:
+50
+left child of the node is:
+20
+right child of the node is:
+45
+Node is:
+20
+left child of the node is:
+11
+right child of the node is:
+15
+Node is:
+45
+left child of the node is:
+30
+right child of the node is:
+78
+
+#BINARY TREE TRAVERSAL PROGRAM(USING RECURSIVE):
+class Node:
+    def __init__(self,key):
+        self.left=None
+        self.right=None
+        self.val=key
+#Function-Inorder
+def printInorder(root):
+        if root:
+            #first recur on left child
+            printInorder(root.left)
+            #then print data of the node
+            print(root.val,end=" ")
+            #now recur on right child
+            printInorder(root.right)
+#Function-Postorder
+def printPostorder(root):
+        if root:
+            #first recur on left child
+            printPostorder(root.left)
+            #then recur on right child
+            printPostorder(root.right)
+            #now print data of the node
+            print(root.val,end=" ")
+#Function-Preorder
+def printPreorder(root):
+        if root:
+            #first print data of the node
+            print(root.val,end=" ")
+            #then recur on left child
+            printPreorder(root.left)
+            #now recur on right child
+            printPreorder(root.right)
+root=Node(1)
+root.left=Node(2)
+root.right=Node(3)
+root.left.left=Node(4)
+root.left.right=Node(5)
+print("PRE-ORDER:")
+printPreorder(root)
+print("IN-ORDER:")
+printInorder(root)
+print("POST-ORDER:")
+printPostorder(root)
+OUTPUT:
+PRE-ORDER:
+1 2 4 5 3 
+IN-ORDER:
+4 2 5 1 3 
+POST-ORDER:
+4 5 2 3 1 
+
+
+#IMPLEMENTATION/INSERTION OF BST:
+#BST-INSERT
+class Node:
+    def __init__(self,key):
+        self.left=None
+        self.right=None
+        self.val=key
+#a new node with the given key
+def insert(root,key):
+    if root is None:
+        return Node(key)
+    else:
+        if root.val==key:
+            return root
+        elif root.val<key:
+            root.right=insert(root.right,key)
+        else:
+            root.left=insert(root.left,key)
+    return root
+#Inorder treversal
+def Inorder(root):
+        if root:
+            Inorder(root.left)
+            print(root.val,end=" ")
+            Inorder(root.right)
+r=Node(50)
+r=insert(r,30)
+r=insert(r,40)
+r=insert(r,20)
+r=insert(r,60)
+r=insert(r,70)
+r=insert(r,80)
+Inorder(r)
+OUTPUT:
+20 30 40 50 60 70 80 90 
+
+
+
+#DELETION OF NODE IN BST:
+class node:
+    def __init__(self,key):
+        self.left=None
+        self.right=None
+        self.key=key
+def Inorder(root):
+        if root:
+            Inorder(root.left)
+            print(root.key,end=" ")
+            Inorder(root.right)
+def insert(root,key):
+    #if the tree is empty,return a new node
+    if root is None:
+        return node(key)  
+    #otherwise recur down the tree
+    if key<root.key:
+        root.left=insert(root.left,key)
+    else:
+        root.right=insert(root.right,key)
+    return root
+#given a non-empty binary
+#search tree,return the node
+#found in that tree.note that the entire tree does not need to be searched
+def minvaluenode(node):    #right subtree
+    current=node
+    #loop down to find the leftmost leaf
+    while(current.left is not None):
+        current=current.left
+    return current
+#given a binary search tree and a key,this function
+#delete the key and returns the new root
+def deletenode(root,key):
+    #base case
+    if root is None:
+        return root
+    #key<root,it less in left subtree
+    if key<root.key:
+        root.left=deletenode(root.left,key)
+    elif(key>root.key):
+        root.right=deletenode(root.right,key)
+    #If key is same as root's key,then this is
+    #to be deleted
+    else:
+        #node with only one child or no child
+        if root.left is None:
+            temp=root.right
+            root=None
+            return temp
+        elif root.right is None:
+            temp=root.left
+            root=None
+            return temp
+        #node with 2 children
+        #get inorder successor
+        #(smallest in the right subtree)
+        temp=minvaluenode(root.right)
+        #copy inorder successor's
+        #content to this node
+        root.key=temp.key
+        #delete the inorder successor
+        root.right=deletenode(root.right,temp.key)
+    return root
+"""let us create following BST
+              50
+            /   \
+          30    70
+        /   \   /  \
+        20  40 60 80  """
+root=None
+root=insert(root,50)
+root=insert(root,30)
+root=insert(root,70)
+root=insert(root,20)
+root=insert(root,40)
+root=insert(root,60)
+root=insert(root,80)
+print("Inorder traversal of the given tree")
+Inorder(root)
+print("\nDelete 20")
+root=deletenode(root,20)
+print("Inorder traversal of the modified tree")
+Inorder(root)
+print("\nDelete 30")
+root=deletenode(root,30)
+print("Inorder traversal of the modified tree")
+Inorder(root)
+print("\nDelete 50")
+root=deletenode(root,50)
+print("Inorder traversal of the modified tree")
+Inorder(root)
+OUTPUT:
+Inorder traversal of the given tree
+20 30 40 50 60 70 80 
+Delete 20
+Inorder traversal of the modified tree
+30 40 50 60 70 80 
+Delete 30
+Inorder traversal of the modified tree
+40 50 60 70 80 
+Delete 50
+Inorder traversal of the modified tree
+40 60 70 80 
