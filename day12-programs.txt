@@ -1,0 +1,158 @@
+#implementation of graphs using defaultdict function from collections module
+#import dictionary for graph
+from collections import defaultdict
+
+#add edge to graph:function
+graph=defaultdict(list)
+def addEdge(graph,u,v):
+    graph[u].append(v)
+#function description
+def generate_edges(graph):
+    edges=[]
+    #for each node in graph
+    for node in graph:
+        #for each neighbour node of a single node
+        for neighbour in graph[node]:
+            #if edge exists then append
+            edges.append((node,neighbour))
+    return edges
+
+#declaring graph as dictionary
+addEdge(graph,'a','c')
+addEdge(graph,'b','c')
+addEdge(graph,'b','e')
+addEdge(graph,'c','d')
+addEdge(graph,'c','e')
+addEdge(graph,'c','a')
+addEdge(graph,'c','b')
+addEdge(graph,'e','b')
+addEdge(graph,'d','c')
+addEdge(graph,'e','c')
+#printing graph
+print(generate_edges(graph))
+OUTPUT:
+[('a', 'c'), ('b', 'c'), ('b', 'e'), ('c', 'd'), ('c', 'e'), ('c', 'a'), ('c', 'b'), ('e', 'b'), ('e', 'c'), ('d', 'c')]
+
+
+#code for adjacency matrix
+class Graph(object):
+    #initialize the matrix
+    def __init__(self,size):
+        self.adjMatrix=[]
+        for i in range(size):
+            self.adjMatrix.append([0 for i in range(size)])
+        self.size=size
+    #add edges
+    def add_edge(self,v1,v2):
+        if v1==v2:
+            print("same vertex %d and %d" %(v1,v2))
+        self.adjMatrix[v1][v2]=1
+        self.adjMatrix[v2][v1]=1
+    #Remove edges
+    def remove_edge(self,v1,v2):
+        if v1==v2:
+            print("no edge between %d and %d"%(v1,v2))
+            return
+        self.adjMatrix[v1][v2]=0
+        self.adjMatrix[v1][v2]=0
+    def __len__(self):
+        return self.size
+    def print_matrix(self):
+        for row in self.adjMatrix:
+            for val in row:
+                print("{:4}".format(val))
+            print()
+def main():
+    g=Graph(5)
+    g.add_edge(0,1)
+    g.add_edge(0,2)
+    g.add_edge(1,2)
+    g.add_edge(2,0)
+    g.add_edge(2,3)
+    g.print_matrix()
+if __name__=='__main__':
+    main()
+OUTPUT:
+ 0
+   1
+   1
+   0
+   0
+
+   1
+   0
+   1
+   0
+   0
+
+   1
+   1
+   0
+   1
+   0
+
+   0
+   0
+   1
+   0
+   0
+
+   0
+   0
+   0
+   0
+   0
+
+
+#BFS:
+graph={
+    '5':['3','7'],
+    '3':['2','4'],
+    '7':['8'],
+    '2':[],
+    '4':['8'],
+    '8':[]
+}
+visited=[]
+queue=[]
+def bfs(visited,graph,node):
+  visited.append(node)
+  queue.append(node)
+  while(queue):
+    m=queue.pop(0)
+    print(m)
+    for neighbour in graph[m]:
+      if neighbour not in visited:
+        visited.append(neighbour) 
+        queue.append(neighbour)
+bfs(visited,graph,'5')
+OUTPUT:
+5
+3
+7
+2
+4
+8
+
+#DFS:
+graph={
+    '5':['3','7'],
+    '3':['2','4'],
+    '7':['8'],
+    '2':[],
+    '4':['8'],
+    '8':[]
+}
+visited=set()
+def dfs(visited,graph,node):
+  if node not in visited:
+    print(node)
+    visited.add(node)
+    for neighbour in graph[node]:
+      dfs(visited,graph,neighbour)
+dfs(visited,graph,'3') 
+OUTPUT:
+3
+2
+4
+8

@@ -1,0 +1,25 @@
+#GRAPHS:
+A graph is a pictorial representation of a set objects where some pairs of objects are connected by links.
+
+
+#TYPES OF GRAPHS:
+1.DIRECTED GRAPH:A directed graph is graph, i.e., a set of objects (called vertices or nodes) that are connected together, where all the edges are directed from one vertex to another. A directed graph is sometimes called a digraph or a directed network.
+
+2.UNDIRECTED GRAPH:An undirected graph is graph, i.e., a set of objects (called vertices or nodes) that are connected together, where all the edges are bidirectional. An undirected graph is sometimes called an undirected network
+
+3.WEIGHTED GRAPH:A weighted graph is a graph in which each branch is given a numerical weight. A weighted graph is therefore a special type of labeled graph in which the labels are numbers (which are usually taken to be positive).
+
+#REPRESENTATION OF GRAPH:
+TYPES:
+1.LIST OF EDGES
+2.ADJUSCENCY MATRIX
+3.ADJUSCENCY LIST
+
+Graph Traversal
+->In BFS visit a vertex and move on to all adjacent vertices
+->In DFS after visiting a node select one adjacent vertex and explore it completely move on with other vertex
+
+DIJKSTRA ALGORITHM
+1.It comes under greedy method where solution for the given problem will be figured out stage by stage
+2.It helps you to find out shortest path from one vertex to all other vertices
+3.Drawback::If weight of any edge is a negative number this algorithm won't work for that
